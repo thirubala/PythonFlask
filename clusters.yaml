@@ -1,0 +1,7 @@
+- alias: hasura
+  config:
+    configmap: controller-conf
+    namespace: joviality89-hasura
+  data: null
+  kubeContext: joviality89
+  name: joviality89
