@@ -8,18 +8,4 @@ from flask import Flask,request,render_template,make_response
 def home():
     return 'Hello'
 
-#task-two
-@app.route("/GetMetric",methods=['POST'])
-def getMetric():
-	metric = request.form['metric']
-	return metric
-
-@app.route('/Thiru-taskone')
-def hello_world():
-	users = requests.get('https://jsonplaceholder.typicode.com/users').json()
-	posts = requests.get('https://jsonplaceholder.typicode.com/posts').json()
-	return render_template('Task2.html',users=users,posts=posts)
-			
-	return "Done"
-
 app.run(debug = True,port=8080)
