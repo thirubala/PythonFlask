@@ -1,20 +1,25 @@
 from src import app
-# from flask import jsonify
+from flask import jsonify
+from flask import json
+from flask import Flask,request,render_template,make_response
 
-
+#task-two
 @app.route("/")
 def home():
-    return "Hasura Hello World"
+    return 'Hello'
 
-# Uncomment to add a new URL at /new
-#task-one-one
+#task-two
+@app.route("/GetMetric",methods=['POST'])
+def getMetric():
+	metric = request.form['metric']
+	return metric
+
 @app.route('/Thiru-taskone')
 def hello_world():
-    users = requests.get('https://jsonplaceholder.typicode.com/users').json()
+	users = requests.get('https://jsonplaceholder.typicode.com/users').json()
 	posts = requests.get('https://jsonplaceholder.typicode.com/posts').json()
 	return render_template('Task2.html',users=users,posts=posts)
 			
-	return "Done"return 'Hello World - Thiru'
+	return "Done"
 
-	
-	
+app.run(debug = True,port=8080)

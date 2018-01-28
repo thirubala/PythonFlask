@@ -1,0 +1,20 @@
+- args:
+    permission:
+      columns:
+      - ID
+      - Country
+      - H_Rank
+      - H_Score
+      - Whisker_H
+      - Whisker_L
+      - GDP
+      - Family
+      - HLE
+      - Freedom
+      - Generosity
+      - TGC
+      - DR
+      filter: {}
+    role: anonymous
+    table: world_happ_rpt
+  type: create_select_permission

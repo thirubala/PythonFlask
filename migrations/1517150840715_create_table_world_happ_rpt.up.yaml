@@ -1,0 +1,11 @@
+- args:
+    sql: CREATE TABLE "world_happ_rpt"("ID" integer NOT NULL, "Country" text NOT NULL,
+      "H_Rank" integer NOT NULL, "H_Score" numeric NOT NULL, "Whisker_H" numeric NOT
+      NULL, "Whisker_L" numeric NOT NULL, "GDP" numeric NOT NULL, "Family" numeric
+      NOT NULL, "HLE" numeric NOT NULL, "Freedom" numeric NOT NULL, "Generosity" numeric
+      NOT NULL, "TGC" numeric NOT NULL, "DR" numeric NOT NULL, PRIMARY KEY ("ID")
+      )
+  type: run_sql
+- args:
+    name: world_happ_rpt
+  type: add_existing_table_or_view
