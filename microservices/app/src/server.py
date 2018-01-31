@@ -3,7 +3,7 @@ from flask import jsonify
 from flask import json
 from flask import Flask,request,render_template,make_response
 
-var hasuradbUrl := "https://data.joviality89.hasura-app.io/v1/query";
+hasuradbUrl = "https://data.joviality89.hasura-app.io/v1/query";
 
 #task-two
 @app.route("/")
@@ -15,14 +15,14 @@ def home():
 def getMetric():
 	metric = request.form['metric']
 	print(metric)
-	var requestOptions = {
+	requestOptions = {
     "method": "POST",
     "headers": {
         "Content-Type": "application/json"
 		}
 	}
 
-	var metricDB =  = {
+	metricDB =  = {
 		"type": "select",
 		"args": {
 			"table": "world_happ_rpt",
@@ -40,7 +40,7 @@ def getMetric():
 
     resp = requests.request("POST", hasuradbUrl, data=json.dumps(metricDB))
     respObj = resp.json()
-	var actualMetric
+	actualMetric[] = 0
 	
 	for i in len(respObj):
 	
