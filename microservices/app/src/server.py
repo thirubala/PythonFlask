@@ -22,7 +22,7 @@ def getMetric():
 		}
 	}
 
-	metricDB =  = {
+	metricDB = {
 		"type": "select",
 		"args": {
 			"table": "world_happ_rpt",
