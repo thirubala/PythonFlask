@@ -14,7 +14,7 @@ def getMetric():
 	metric = request.form['metric']
 	print(metric)
 
-	var metricDB =  = {
+	var metricDB  = {
 		"type": "select",
 		"args": {
 			"table": "world_happ_rpt",
