@@ -30,20 +30,6 @@ items:
           ports:
           - containerPort: 8080
             protocol: TCP
-          -name: POSTGRES_HOSTNAME
-           value: postgres.{{cluster.metadata.namespaces.hasura }}
-          -name: POSTGRES_PORT
-           value: "5432"
-          -name: POSTGRES_USERNAME
-           valueFrom:
-            secretRefKey:
-             name: hasura-secrets
-             key: postgres.user
-          -name: POSTGRES_PASSWORD
-           valueFrom:
-            secretRefKey:
-             name: hasura-secrets
-             key: postgres.password
           resources: {}
         securityContext: {}
         terminationGracePeriodSeconds: 0
