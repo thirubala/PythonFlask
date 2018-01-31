@@ -3,8 +3,6 @@ from flask import jsonify
 from flask import json
 from flask import Flask,request,render_template,make_response
 
-var hasuradbUrl = "https://data.joviality89.hasura-app.io/v1/query";
-
 #task-two
 @app.route("/")
 def home():
@@ -38,7 +36,7 @@ var metricDB =  = {
     }
 }
 
-    resp = requests.request("POST", hasuradbUrl, data=json.dumps(metricDB))
+    resp = requests.request("POST", "https://data.joviality89.hasura-app.io/v1/query", data=json.dumps(metricDB))
     respObj = resp.json()
 	var actualMetric
 	
