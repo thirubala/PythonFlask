@@ -38,7 +38,7 @@ def getMetric():
 		}
 	}
 
-    resp = requests.request("POST", hasuradbUrl, data=json.dumps(metricDB))
+    resp = requests.request("POST", hasuradbUrl, data=json.dumps(metricDB)
     respObj = resp.json()
 	actualMetric[] = 0
 	
