@@ -13,28 +13,22 @@ def home():
 def getMetric():
 	metric = request.form['metric']
 	print(metric)
-	var requestOptions = {
-    "method": "POST",
-    "headers": {
-        "Content-Type": "application/json"
-    }
-}
 
-var metricDB =  = {
-    "type": "select",
-    "args": {
-        "table": "world_happ_rpt",
-        "columns": [
-            "*"
-        ],
-        "order_by": [
-            {
-                "column": "H_Rank",
-                "order": "asc"
-            }
-        ]
-    }
-}
+	var metricDB =  = {
+		"type": "select",
+		"args": {
+			"table": "world_happ_rpt",
+			"columns": [
+				"*"
+			],
+			"order_by": [
+				{
+					"column": "H_Rank",
+					"order": "asc"
+				}
+			]
+		}
+	}
 
     resp = requests.request("POST", "https://data.joviality89.hasura-app.io/v1/query", data=json.dumps(metricDB))
     respObj = resp.json()
